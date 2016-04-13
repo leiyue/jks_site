@@ -28,11 +28,10 @@ from django.utils.translation import ugettext_lazy as _
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
 #
-# DASHBOARD_TAGS = (
-#     ("blog_tags.quick_blog", "mezzanine_tags.app_list"),
-#     ("comment_tags.recent_comments",),
-#     ("mezzanine_tags.recent_actions",),
-# )
+DASHBOARD_TAGS = (
+    ('blog_tags.quick_blog', 'admin_backup_tags.admin_backup', 'mezzanine_tags.app_list'),
+    ('comment_tags.recent_comments',),
+    ('mezzanine_tags.recent_actions',),)
 
 # A sequence of templates used by the ``page_menu`` template tag. Each
 # item in the sequence is a three item sequence, containing a unique ID
@@ -228,6 +227,13 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    'apps.themes.apps.ThemesConfig',
+    'apps.page_auth_groups.apps.PageAuthConfig',
+    'apps.category_links.apps.CategoryLinksConfig',
+    'apps.admin_backups.apps.AdminBackupsConfig',
+    'apps.polls.apps.PollsConfig',
+    'apps.surveys.apps.SurveysConfig',
+
     'modeltranslation',
 
     "django.contrib.admin",
@@ -251,11 +257,6 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     # "mezzanine.mobile",
 
-    'apps.themes.apps.ThemesConfig',
-    'apps.page_auth_groups.apps.PageAuthConfig',
-    'apps.category_links.apps.CategoryLinksConfig',
-    'apps.polls.apps.PollsConfig',
-    'apps.surveys.apps.SurveysConfig',
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
