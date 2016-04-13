@@ -1,3 +1,2 @@
 Mezzanine==4.1.0
 django-modeltranslation
-mezzanine_polls

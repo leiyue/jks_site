@@ -1,10 +1,9 @@
-
 from __future__ import absolute_import, unicode_literals
+
 import os
 
 from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
-
 
 ######################
 # MEZZANINE SETTINGS #
@@ -85,7 +84,6 @@ from django.utils.translation import ugettext_lazy as _
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
 
-
 ########################
 # MAIN DJANGO SETTINGS #
 ########################
@@ -136,7 +134,6 @@ AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 # a mode you'd pass directly to os.chmod.
 FILE_UPLOAD_PERMISSIONS = 0o644
 
-
 #############
 # DATABASES #
 #############
@@ -157,7 +154,6 @@ DATABASES = {
         "PORT": "",
     }
 }
-
 
 #########
 # PATHS #
@@ -254,8 +250,12 @@ INSTALLED_APPS = (
     # "mezzanine.twitter",
     "mezzanine.accounts",
     # "mezzanine.mobile",
-    # 'polls',
 
+    'apps.themes.apps.ThemesConfig',
+    'apps.page_auth_groups.apps.PageAuthConfig',
+    'apps.category_links.apps.CategoryLinksConfig',
+    'apps.polls.apps.PollsConfig',
+    'apps.surveys.apps.SurveysConfig',
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
@@ -320,12 +320,12 @@ f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
     import sys
     import imp
+
     module_name = "%s.local_settings" % PROJECT_APP
     module = imp.new_module(module_name)
     module.__file__ = f
     sys.modules[module_name] = module
     exec(open(f, "rb").read())
-
 
 ####################
 # DYNAMIC SETTINGS #
