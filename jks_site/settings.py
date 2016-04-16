@@ -27,9 +27,9 @@ from django.utils.translation import ugettext_lazy as _
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
-#
+
 DASHBOARD_TAGS = (
-    ('blog_tags.quick_blog', 'admin_backup_tags.admin_backup', 'mezzanine_tags.app_list'),
+    ('blog_tags.quick_blog', 'mezzanine_tags.app_list', 'admin_backup_tags.admin_backup'),
     ('comment_tags.recent_comments',),
     ('mezzanine_tags.recent_actions',),)
 
