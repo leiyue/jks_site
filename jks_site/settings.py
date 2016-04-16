@@ -1,10 +1,9 @@
-
 from __future__ import absolute_import, unicode_literals
+
 import os
 
 from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
-
 
 ######################
 # MEZZANINE SETTINGS #
@@ -28,12 +27,11 @@ from django.utils.translation import ugettext_lazy as _
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
-#
-# DASHBOARD_TAGS = (
-#     ("blog_tags.quick_blog", "mezzanine_tags.app_list"),
-#     ("comment_tags.recent_comments",),
-#     ("mezzanine_tags.recent_actions",),
-# )
+
+DASHBOARD_TAGS = (
+    ('blog_tags.quick_blog', 'mezzanine_tags.app_list', 'admin_backup_tags.admin_backup'),
+    ('comment_tags.recent_comments',),
+    ('mezzanine_tags.recent_actions',),)
 
 # A sequence of templates used by the ``page_menu`` template tag. Each
 # item in the sequence is a three item sequence, containing a unique ID
@@ -85,7 +83,6 @@ from django.utils.translation import ugettext_lazy as _
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
 
-
 ########################
 # MAIN DJANGO SETTINGS #
 ########################
@@ -136,7 +133,6 @@ AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 # a mode you'd pass directly to os.chmod.
 FILE_UPLOAD_PERMISSIONS = 0o644
 
-
 #############
 # DATABASES #
 #############
@@ -157,7 +153,6 @@ DATABASES = {
         "PORT": "",
     }
 }
-
 
 #########
 # PATHS #
@@ -232,6 +227,13 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    'apps.themes.apps.ThemesConfig',
+    'apps.page_auth_groups.apps.PageAuthConfig',
+    'apps.category_links.apps.CategoryLinksConfig',
+    'apps.admin_backups.apps.AdminBackupsConfig',
+    'apps.polls.apps.PollsConfig',
+    'apps.surveys.apps.SurveysConfig',
+
     'modeltranslation',
 
     "django.contrib.admin",
@@ -254,7 +256,6 @@ INSTALLED_APPS = (
     # "mezzanine.twitter",
     "mezzanine.accounts",
     # "mezzanine.mobile",
-    # 'polls',
 
 )
 
@@ -320,12 +321,12 @@ f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
     import sys
     import imp
+
     module_name = "%s.local_settings" % PROJECT_APP
     module = imp.new_module(module_name)
     module.__file__ = f
     sys.modules[module_name] = module
     exec(open(f, "rb").read())
-
 
 ####################
 # DYNAMIC SETTINGS #
