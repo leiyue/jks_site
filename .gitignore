@@ -1,6 +1,8 @@
-migrations
-/static
 backup
+migrations
+/tempaltes
+/static
+
 dev.db
 
 ### JetBrains template
