@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-17 00:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: admin.py:20
+msgid "Other posts"
+msgstr ""
+
+#: defaults.py:10
+msgid "Enable featured images in news posts"
+msgstr ""
+
+#: defaults.py:26
+msgid "Blog post URL date format"
+msgstr ""
+
+#: defaults.py:27
+msgid ""
+"A string containing the value ``year``, ``month``, or ``day``, which "
+"controls the granularity of the date portion in the URL for each news post. "
+"Eg: ``year`` will define URLs in the format /news/yyyy/slug/, while ``day`` "
+"will define URLs with the format /news/yyyy/mm/dd/slug/. An empty string "
+"means the URLs will only use the slug, and not contain any portion of the "
+"date at all."
+msgstr ""
+
+#: defaults.py:39
+msgid "Blog posts per page"
+msgstr ""
+
+#: defaults.py:40
+msgid "Number of news posts shown on a news listing page."
+msgstr ""
+
+#: defaults.py:47
+msgid "Blog posts RSS limit"
+msgstr ""
+
+#: defaults.py:48
+msgid ""
+"Number of most recent news posts shown in the RSS feed. Set to ``None`` to "
+"display all news posts in the RSS feed."
+msgstr ""
+
+#: defaults.py:56
+msgid "Slug of the page object for the news."
+msgstr ""
+
+#: models.py:17 templates/news/includes/filter_panel.html.py:43
+msgid "Categories"
+msgstr ""
+
+#: models.py:19
+msgid "Allow comments"
+msgstr ""
+
+#: models.py:21 templates/news/news_post_detail.html.py:43
+#: templates/news/news_post_list.html:136
+msgid "Comments"
+msgstr ""
+
+#: models.py:22
+msgid "Rating"
+msgstr ""
+
+#: models.py:23
+msgid "Featured Image"
+msgstr ""
+
+#: models.py:27 templates/news/news_post_detail.html.py:119
+msgid "Related posts"
+msgstr ""
+
+#: models.py:32
+msgid "News post"
+msgstr ""
+
+#: models.py:33
+msgid "News posts"
+msgstr ""
+
+#: models.py:69
+msgid "News Category"
+msgstr ""
+
+#: models.py:70
+msgid "News Categories"
+msgstr ""
+
+#: templates/admin/includes/quick_news.html:18
+msgid "Quick News"
+msgstr ""
+
+#: templates/admin/includes/quick_news.html:27
+msgid "Save Draft"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:6
+msgid "Recent Posts"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:27
+msgid "Archive"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:56
+#: templates/news/news_post_detail.html:74
+#: templates/news/news_post_list.html:121
+msgid "Tags"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:72
+msgid "Authors"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:84
+msgid "Feeds"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:86
+#: templates/news/includes/filter_panel.html:90
+#: templates/news/includes/filter_panel.html:94
+#: templates/news/includes/filter_panel.html:98
+msgid "RSS"
+msgstr ""
+
+#: templates/news/includes/filter_panel.html:87
+#: templates/news/includes/filter_panel.html:91
+#: templates/news/includes/filter_panel.html:95
+#: templates/news/includes/filter_panel.html:99
+msgid "Atom"
+msgstr ""
+
+#: templates/news/news_post_detail.html:29
+#: templates/news/news_post_list.html:85
+msgid "Posted by"
+msgstr ""
+
+#: templates/news/news_post_detail.html:33
+#: templates/news/news_post_list.html:97
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+#: templates/news/news_post_detail.html:46
+#: templates/news/news_post_list.html:140
+#, python-format
+msgid "%(comments_count)s comment"
+msgid_plural "%(comments_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/news/news_post_detail.html:93
+msgid "Share on Twitter"
+msgstr ""
+
+#: templates/news/news_post_detail.html:94
+msgid "Share on Facebook"
+msgstr ""
+
+#: templates/news/news_post_list.html:4 templates/news/news_post_list.html:22
+msgid "News"
+msgstr ""
+
+#: templates/news/news_post_list.html:31
+msgid "Tag:"
+msgstr ""
+
+#: templates/news/news_post_list.html:33
+msgid "Category:"
+msgstr ""
+
+#: templates/news/news_post_list.html:37
+msgid "Author:"
+msgstr ""
+
+#: templates/news/news_post_list.html:50
+msgid "Viewing posts tagged"
+msgstr ""
+
+#: templates/news/news_post_list.html:52
+msgid "Viewing posts for the category"
+msgstr ""
+
+#: templates/news/news_post_list.html:54
+msgid "Viewing posts from"
+msgstr ""
+
+#: templates/news/news_post_list.html:57
+msgid "Viewing posts by"
+msgstr ""
+
+#: templates/news/news_post_list.html:91
+msgid "in"
+msgstr ""
+
+#: templates/news/news_post_list.html:130
+msgid "read more"
+msgstr ""

@@ -228,6 +228,7 @@ if DJANGO_VERSION < (1, 9):
 
 INSTALLED_APPS = (
     'apps.themes.apps.ThemesConfig',
+    'apps.news.apps.NewsConfig',
     'apps.page_auth_groups.apps.PageAuthConfig',
     'apps.category_links.apps.CategoryLinksConfig',
     'apps.admin_backups.apps.AdminBackupsConfig',
