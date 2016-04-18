@@ -49,28 +49,32 @@
 </head>
 
 <body id="{% block body_id %}body{% endblock %}">
-<div class="container">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">{% trans "Toggle Navigation" %}</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
+<div class="nav navbar-default" role="navigation">
+    <div class="container">
         {% block navbar_title %}
             {% if settings.SITE_TITLE %}<a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
             {% if settings.SITE_TAGLINE %}<p class="navbar-text visible-lg">{{ settings.SITE_TAGLINE }}</p>
             {% endif %}
         {% endblock %}
-    </div>
-    <div class="navbar-collapse collapse">
         {% block navbar_search_form %}{% search_form "all" %}{% endblock %}
     </div>
-</div>
-<div class="navbar-default" role="navigation">
     <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">{% trans "Toggle Navigation" %}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
         <div class="navbar-collapse collapse">
-            {% block navbar_dropdown_menu %}{% page_menu "pages/menus/dropdown.html" %}{% endblock %}
+            <div class="col-md-9">{% block navbar_dropdown_menu %}{% page_menu "pages/menus/dropdown.html" %}{% endblock %}</div>
+            <div class="col-md-3">
+               {% nevercache %}
+                {% include "includes/language_selector.html" %}
+                {% include "includes/user_panel.html" %}
+            {% endnevercache %}
+            </div>
         </div>
     </div>
 </div>
@@ -97,7 +101,7 @@
         {% endspaceless %}
     </ul>
 </div>
-
+{% block index %}
 <div class="container">
     <div class="row">
         <div class="col-md-9">
@@ -107,10 +111,6 @@
             {% block tree_panel %}
                 <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
             {% endblock %}
-            {% nevercache %}
-                {% include "includes/language_selector.html" %}
-                {% include "includes/user_panel.html" %}
-            {% endnevercache %}
 {#            <div class="panel panel-default">#}
 {#                <div class="panel-body">#}
 {#                    {% block right_panel %}#}
@@ -123,6 +123,7 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
 {% get_site_wide_content as site_wide %}
 {% if site_wide %}
