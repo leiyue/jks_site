@@ -1,3 +1,29 @@
 body{
     padding-top: 0;
 }
+.top-con{
+    border: 1px solid #ccc;
+    padding: 20px 0;
+}
+.news{
+    background-color: #eeeeee;
+    padding: 5px 0 5px 10px;
+}
+.news-list-con li{
+    padding: 5px 5px;
+     width: 420px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.news-list-con li span{
+    color: #e50500;
+}
+.news-list-con li a{
+    color: #3c3c3c;
+
+}
+.news-list-con li a:hover{
+    color: #e50500;
+}
