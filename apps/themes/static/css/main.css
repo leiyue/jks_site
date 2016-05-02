@@ -1,5 +1,6 @@
 body{
     padding-top: 0;
+    font-family: "Microsoft YaHei","Helvetica Neue",Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 li{
     list-style: none;
@@ -71,3 +72,35 @@ li{
 .footer-con>div{
     margin-bottom: 10px;
 }
+
+
+/*新闻列表页*/
+.news-list-topContainer{
+    color: #c3c3c3;
+}
+.news-list-title{
+    margin: 0;
+}
+.news-list-title a{
+    color: #333;
+    font-weight: 700;
+    font-size: 16px;
+}
+.news-edit-time{
+    font-size: 12px;
+    font-weight: normal;
+}
+.news-list-detailContainer a{
+    font-size: 12px;
+}
+/*新闻列表页结束*/
+
+/*新闻详情页*/
+.news-detail-titleCoantainer{
+    text-align: center;
+}
+.news-author{
+    padding: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+/*新闻详情页结束*/
